@@ -705,6 +705,50 @@
             transform: rotate(20deg);
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-top:hover svg {
+            transform: translateY(-2px);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             header {
@@ -855,6 +899,7 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">A selection of my recent work</p>
+            
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -883,7 +928,6 @@
                     </div>
                 </div>
 
-            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
                         <div>
@@ -918,7 +962,7 @@
                     <div class="project-header">
                         <div>
                             <h3 class="project-title">Lumina</h3>
-                            <p class="project-tech">Headless Shopify Storefront</p>
+                            <p class="project-tech">E-Commerce Business - Headless Shopify Storefront</p>
                         </div>
                     </div>
                     <div class="project-tech-stack">
@@ -927,15 +971,16 @@
                         <span class="tech-badge">Shopify Storefront API</span>
                         <span class="tech-badge">Zustand</span>
                         <span class="tech-badge">TanStack Query</span>
+                        <span class="tech-badge" style="background: var(--chocolate); color: var(--bg-primary); font-weight: 700;">💼 Live Business</span>
                     </div>
                     <p class="project-description">
-                        <strong>What it does:</strong> Custom headless Shopify storefront with kawaii aesthetic. Complete e-commerce experience with product catalog, shopping cart, and customer account creation via Shopify Storefront API (GraphQL).<br><br>
-                        <strong>Key features:</strong> GraphQL integration with @shopify/hydrogen-react, custom cart system with cross-device persistence, TanStack Query for optimized data fetching and caching, product variant selection, customer account creation with Zod validation<br><br>
-                        <strong>Technical highlights:</strong> Headless commerce architecture, Zustand state management, React Hook Form integration, custom Tailwind design system, automated GitHub Actions deployment to custom domain
+                        <strong>What it does:</strong> Operating e-commerce business with custom headless Shopify storefront. Full shopping experience with real product catalog, payment processing, and customer account management on custom domain (luminaco.skin).<br><br>
+                        <strong>Key features:</strong> Production Shopify integration via GraphQL, real-time inventory management, secure checkout flow, custom cart system with cross-device persistence, TanStack Query for optimized data fetching, product variant selection, customer account creation with validation<br><br>
+                        <strong>Technical highlights:</strong> Headless commerce architecture, Zustand state management, React Hook Form + Zod validation, custom Tailwind design system, automated GitHub Actions deployment, operating business with real transactions and customers
                     </p>
                     <div class="project-links">
                         <a href="https://luminaco.skin" target="_blank" class="project-link">
-                            <span>Live Demo</span> →
+                            <span>Live Store</span> →
                         </a>
                         <a href="https://github.com/MoraRosa/lumina" target="_blank" class="project-link">
                             <span>GitHub</span> →
@@ -975,7 +1020,7 @@
                 <div class="project-card">
                     <div class="project-header">
                         <div>
-                            <h3 class="project-title">Mizzie</h3>
+                            <h3 class="project-title">Miss Buzzie</h3>
                             <p class="project-tech">AI-Powered Business Planning Platform</p>
                         </div>
                     </div>
@@ -992,9 +1037,6 @@
                         <strong>Technical highlights:</strong> On-device AI for privacy, React Hook Form + Zod validation, Recharts for data visualization, automated testing with Vitest, CI/CD with GitHub Actions, GitHub Pages deployment
                     </p>
                     <div class="project-links">
-                        <a href="https://morarosa.github.io/Miss-Buzzie/" target="_blank" class="project-link">
-                            <span>Live Demo</span> →
-                        </a>
                         <a href="https://github.com/MoraRosa/Miss-Buzzie" target="_blank" class="project-link">
                             <span>GitHub</span> →
                         </a>
@@ -1003,6 +1045,7 @@
             </div>
         </div>
     </section>
+*** End Patch
 
     <!-- Technical Skills Section -->
     <section class="skills-section" id="skills">
