@@ -3,44 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikmah Adepoju | Frontend Developer</title>
+    <title>MoraRosa | Frontend Developer</title>
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="Full-Stack Developer building scalable web applications with React, TypeScript, and modern cloud architectures. Specializing in e-commerce, PWAs, and headless solutions.">
     <meta name="keywords" content="Full-Stack Developer, React Developer, TypeScript, E-Commerce, Shopify, Stripe, Supabase, PWA, Mobile Development">
     <meta name="author" content="MoraRosa">
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://morarosa.github.io/Portfolio/">
+    <meta property="og:url" content="https://morarosa.github.io/">
     <meta property="og:title" content="MoraRosa | Full-Stack Developer">
     <meta property="og:description" content="Full-Stack Developer specializing in React, TypeScript, e-commerce platforms, and modern web applications.">
-    <meta property="og:image" content="https://morarosa.github.io/Portfolio/logo.png">
-
+    <meta property="og:image" content="https://morarosa.github.io/og-image.png">
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://morarosa.github.io/Portfolio/">
+    <meta property="twitter:url" content="https://morarosa.github.io/">
     <meta property="twitter:title" content="MoraRosa | Full-Stack Developer">
     <meta property="twitter:description" content="Full-Stack Developer specializing in React, TypeScript, e-commerce platforms, and modern web applications.">
-    <meta property="twitter:image" content="https://morarosa.github.io/Portfolio/logo.png">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} 
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
+    <meta property="twitter:image" content="https://morarosa.github.io/og-image.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (9)/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (9)/favicon-32x32.png">
-    <link rel="shortcut icon" href="favicon_io (9)/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (9)/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io (9)/site.webmanifest">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <style>
         :root {
             /* Light mode - Cream base */
@@ -177,7 +174,7 @@
 
         h1 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.8rem, 8vw, 7rem);
+            font-size: clamp(3rem, 8vw, 7rem);
             font-weight: 800;
             background: linear-gradient(135deg, var(--chocolate), var(--mocha), var(--coffee-light));
             -webkit-background-clip: text;
@@ -189,11 +186,10 @@
         }
 
         .subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.8rem);
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             color: var(--text-secondary);
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease-out 0.4s both;
-            padding: 0 1rem;
         }
 
         .subtitle span {
@@ -203,16 +199,16 @@
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2.5rem;
             font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(0.85rem, 2vw, 1rem);
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
             border: 2px solid;
@@ -633,30 +629,6 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
-        .footer-code-btn {
-            color: var(--accent-primary);
-            font-family: 'JetBrains Mono', monospace;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            padding: 0;
-            margin: 0;
-            transition: all 0.3s ease;
-            display: block;
-            margin-top: 0.5rem;
-        }
-
-        .footer-code-btn:hover {
-            color: var(--chocolate);
-            text-shadow: 0 0 10px rgba(141, 110, 99, 0.3);
-            transform: scale(1.05);
-        }
-
-        .footer-code-btn:active {
-            transform: scale(0.95);
-        }
-
         /* Scroll indicator */
         .scroll-indicator {
             position: fixed;
@@ -705,31 +677,52 @@
             transform: rotate(20deg);
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-top:hover svg {
+            transform: translateY(-2px);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
-            header {
-                min-height: 85vh;
-                padding: 2rem 0;
-            }
-
-            h1 {
-                margin-bottom: 0.75rem;
-            }
-
-            .subtitle {
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -737,6 +730,10 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
             }
 
             section {
@@ -776,24 +773,26 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </button>
+    
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="19" x2="12" y2="5"></line>
             <polyline points="5 12 12 5 19 12"></polyline>
         </svg>
     </button>
+    
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
     <!-- Hero Section -->
     <header>
         <div class="container">
             <div class="hero-content">
-                <h1>Hikmah Adepoju</h1>
-                <p class="subtitle">Full-Stack Developer building <span>scalable</span> web applications with React & TypeScript</p>
+                <h1>MORAROSA</h1>
+                <p class="subtitle">Full-Stack Developer & Entrepreneur building <span>scalable</span> web applications</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
-                    <a href="https://www.linkedin.com/in/hikmaha/" target="_blank" class="btn btn-secondary">LinkedIn →</a>
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="btn btn-secondary">LinkedIn →</a>
                 </div>
             </div>
         </div>
@@ -807,9 +806,9 @@
             
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a <strong>full-stack developer</strong> specializing in modern web applications with <strong>React</strong>, <strong>TypeScript</strong>, and cloud architectures. I build complete solutions from database design to deployment.</p>
-                    <p>My expertise includes <strong>e-commerce platforms</strong> with Stripe integration, <strong>headless Shopify storefronts</strong>, <strong>PWA development</strong> with Capacitor, and <strong>AI-powered applications</strong>. I've architected monorepo structures, implemented secure payment processing, and deployed cross-platform mobile apps.</p>
-                    <p>I focus on building scalable, maintainable applications with strong attention to security, performance optimization, and exceptional user experience.</p>
+                    <p>I'm a <strong>full-stack developer</strong> and <strong>entrepreneur</strong> specializing in modern web applications with <strong>React</strong>, <strong>TypeScript</strong>, and cloud architectures. I build complete solutions from database design to deployment, work with clients to bring their vision to life, and run my own e-commerce businesses.</p>
+                    <p>My expertise includes building and operating <strong>production e-commerce platforms</strong> with real transactions, maintaining <strong>client websites</strong> for digital media companies, developing <strong>headless Shopify storefronts</strong> with custom React frontends, <strong>PWA development</strong> with mobile deployment, and <strong>AI-powered applications</strong>. I've architected monorepo structures, implemented secure Stripe payment processing, and manage live production systems serving real customers.</p>
+                    <p>I focus on building scalable, maintainable applications with strong attention to security, performance optimization, and exceptional user experience - whether it's a custom React application, a professionally designed CMS site, or a live e-commerce business generating revenue.</p>
                 </div>
                 
                 <div class="skills-container">
@@ -842,6 +841,12 @@
                         <span>Firebase</span>
                     </div>
                     <div class="skill-tag">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="color: var(--accent-primary);">
+                            <path d="M24 4.5v15c0 1.38-1.12 2.5-2.5 2.5h-19C1.12 22 0 20.88 0 19.5v-15C0 3.12 1.12 2 2.5 2h19C22.88 2 24 3.12 24 4.5zM12 17l-6-5h4V8h4v4h4l-6 5z"/>
+                        </svg>
+                        <span>Webflow</span>
+                    </div>
+                    <div class="skill-tag">
                         <i class="devicon-git-plain"></i>
                         <span>Git & CI/CD</span>
                     </div>
@@ -855,6 +860,7 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">A selection of my recent work</p>
+            
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -883,7 +889,6 @@
                     </div>
                 </div>
 
-            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
                         <div>
@@ -918,7 +923,7 @@
                     <div class="project-header">
                         <div>
                             <h3 class="project-title">Lumina</h3>
-                            <p class="project-tech">Headless Shopify Storefront</p>
+                            <p class="project-tech">E-Commerce Business - Headless Shopify Storefront</p>
                         </div>
                     </div>
                     <div class="project-tech-stack">
@@ -927,15 +932,16 @@
                         <span class="tech-badge">Shopify Storefront API</span>
                         <span class="tech-badge">Zustand</span>
                         <span class="tech-badge">TanStack Query</span>
+                        <span class="tech-badge" style="background: var(--chocolate); color: var(--bg-primary); font-weight: 700;">💼 Live Business</span>
                     </div>
                     <p class="project-description">
-                        <strong>What it does:</strong> Custom headless Shopify storefront with kawaii aesthetic. Complete e-commerce experience with product catalog, shopping cart, and customer account creation via Shopify Storefront API (GraphQL).<br><br>
-                        <strong>Key features:</strong> GraphQL integration with @shopify/hydrogen-react, custom cart system with cross-device persistence, TanStack Query for optimized data fetching and caching, product variant selection, customer account creation with Zod validation<br><br>
-                        <strong>Technical highlights:</strong> Headless commerce architecture, Zustand state management, React Hook Form integration, custom Tailwind design system, automated GitHub Actions deployment to custom domain
+                        <strong>What it does:</strong> Operating e-commerce business with custom headless Shopify storefront. Full shopping experience with real product catalog, payment processing, and customer account management on custom domain (luminaco.skin).<br><br>
+                        <strong>Key features:</strong> Production Shopify integration via GraphQL, real-time inventory management, secure checkout flow, custom cart system with cross-device persistence, TanStack Query for optimized data fetching, product variant selection, customer account creation with validation<br><br>
+                        <strong>Technical highlights:</strong> Headless commerce architecture, Zustand state management, React Hook Form + Zod validation, custom Tailwind design system, automated GitHub Actions deployment, operating business with real transactions and customers
                     </p>
                     <div class="project-links">
                         <a href="https://luminaco.skin" target="_blank" class="project-link">
-                            <span>Live Demo</span> →
+                            <span>Live Store</span> →
                         </a>
                         <a href="https://github.com/MoraRosa/lumina" target="_blank" class="project-link">
                             <span>GitHub</span> →
@@ -975,7 +981,7 @@
                 <div class="project-card">
                     <div class="project-header">
                         <div>
-                            <h3 class="project-title">Mizzie</h3>
+                            <h3 class="project-title">Miss Buzzie</h3>
                             <p class="project-tech">AI-Powered Business Planning Platform</p>
                         </div>
                     </div>
@@ -992,9 +998,6 @@
                         <strong>Technical highlights:</strong> On-device AI for privacy, React Hook Form + Zod validation, Recharts for data visualization, automated testing with Vitest, CI/CD with GitHub Actions, GitHub Pages deployment
                     </p>
                     <div class="project-links">
-                        <a href="https://morarosa.github.io/Miss-Buzzie/" target="_blank" class="project-link">
-                            <span>Live Demo</span> →
-                        </a>
                         <a href="https://github.com/MoraRosa/Miss-Buzzie" target="_blank" class="project-link">
                             <span>GitHub</span> →
                         </a>
@@ -1051,6 +1054,8 @@
                     <span class="skill-item">Vitest</span>
                     <span class="skill-item">Playwright</span>
                     <span class="skill-item">Testing Library</span>
+                    <span class="skill-item">Webflow</span>
+                    <span class="skill-item">CMS Platforms</span>
                 </div>
             </div>
 
@@ -1129,11 +1134,11 @@
                         <span>GitHub</span>
                         <span>→</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/hikmaha/" target="_blank" class="contact-link">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-link">
                         <span>LinkedIn</span>
                         <span>→</span>
                     </a>
-                    <a href="mailto:hikmahbintyaqub@yahoo.com" class="contact-link">
+                    <a href="/cdn-cgi/l/email-protection#d2abbda7a0fcb7bfb3bbbe92b7aab3bfa2beb7fcb1bdbf" class="contact-link">
                         <span>Email</span>
                         <span>→</span>
                     </a>
@@ -1145,170 +1150,94 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Designed & Built by Hikmah Adepoju</p>
-            <button id="confettiBtn" class="footer-code-btn">console.log("Thanks for visiting!");</button>
+            <p>Designed & Built by MoraRosa</p>
+            <p class="footer-code">console.log("Thanks for visiting!");</p>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Theme toggle functionality (guarded)
-            const themeToggle = document.getElementById('themeToggle');
-            const sunIcon = document.getElementById('sunIcon');
-            const moonIcon = document.getElementById('moonIcon');
-            const html = document.documentElement;
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        
+        // Show appropriate icon
+        if (currentTheme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
 
-            try {
-                const currentTheme = localStorage.getItem('theme') || 'light';
-                html.setAttribute('data-theme', currentTheme);
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Toggle icons
+            if (newTheme === 'dark') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        });
 
-                if (sunIcon && moonIcon) {
-                    if (currentTheme === 'dark') {
-                        sunIcon.style.display = 'block';
-                        moonIcon.style.display = 'none';
-                    } else {
-                        sunIcon.style.display = 'none';
-                        moonIcon.style.display = 'block';
-                    }
-                }
+        // Scroll indicator
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight);
+            scrollIndicator.style.transform = `scaleX(${scrolled})`;
+        });
 
-                if (themeToggle) {
-                    themeToggle.addEventListener('click', () => {
-                        const currentTheme = html.getAttribute('data-theme');
-                        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-                        html.setAttribute('data-theme', newTheme);
-                        localStorage.setItem('theme', newTheme);
-
-                        if (sunIcon && moonIcon) {
-                            if (newTheme === 'dark') {
-                                sunIcon.style.display = 'block';
-                                moonIcon.style.display = 'none';
-                            } else {
-                                sunIcon.style.display = 'none';
-                                moonIcon.style.display = 'block';
-                            }
-                        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
-            } catch (err) {
-                console.warn('Theme toggle init failed', err);
-            }
-
-            // Scroll indicator
-            const scrollIndicator = document.getElementById('scrollIndicator');
-            if (scrollIndicator) {
-                window.addEventListener('scroll', () => {
-                    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                    const scrolled = (window.scrollY / (windowHeight || 1));
-                    scrollIndicator.style.transform = `scaleX(${scrolled})`;
-                });
-            }
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
             });
+        });
 
-            // Intersection Observer for scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Confetti button functionality (guarded)
-            const confettiBtn = document.getElementById('confettiBtn');
-            if (confettiBtn) {
-                confettiBtn.addEventListener('click', () => {
-                    // Create confetti using canvas
-                    const canvas = document.createElement('canvas');
-                    canvas.width = window.innerWidth * devicePixelRatio;
-                    canvas.height = window.innerHeight * devicePixelRatio;
-                    canvas.style.position = 'fixed';
-                    canvas.style.top = '0';
-                    canvas.style.left = '0';
-                    canvas.style.width = '100%';
-                    canvas.style.height = '100%';
-                    canvas.style.pointerEvents = 'none';
-                    canvas.style.zIndex = '9998';
-                    document.body.appendChild(canvas);
-
-                    const ctx = canvas.getContext('2d');
-                    if (!ctx) return;
-
-                    ctx.scale(devicePixelRatio, devicePixelRatio);
-
-                    const particles = [];
-                    // Create confetti particles
-                    for (let i = 0; i < 100; i++) {
-                        particles.push({
-                            x: Math.random() * window.innerWidth,
-                            y: Math.random() * -window.innerHeight,
-                            size: Math.random() * 8 + 4,
-                            speedX: (Math.random() - 0.5) * 8,
-                            speedY: Math.random() * 5 + 5,
-                            color: ['#5d4037', '#8d6e63', '#a1887f', '#efebe9', '#d7ccc8'][Math.floor(Math.random() * 5)],
-                            rotation: Math.random() * 360,
-                            rotationSpeed: (Math.random() - 0.5) * 10
-                        });
-                    }
-
-                    const start = performance.now();
-                    const duration = 2000;
-
-                    function animate(now) {
-                        const elapsed = now - start;
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                        particles.forEach(p => {
-                            p.x += p.speedX;
-                            p.y += p.speedY;
-                            p.speedY += 0.2; // gravity
-                            p.rotation += p.rotationSpeed;
-
-                            ctx.save();
-                            ctx.translate(p.x, p.y);
-                            ctx.rotate((p.rotation * Math.PI) / 180);
-                            ctx.fillStyle = p.color;
-                            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-                            ctx.restore();
-                        });
-
-                        if (elapsed < duration) {
-                            requestAnimationFrame(animate);
-                        } else {
-                            canvas.remove();
-                        }
-                    }
-
-                    requestAnimationFrame(animate);
-                    });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                     entry.target.style.transform = 'translateY(0)';
                 }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
 
         // Back to Top button functionality
         const backToTop = document.getElementById('backToTop');
-
+        
         window.addEventListener('scroll', () => {
-            if (!backToTop) return;
             if (window.scrollY > 500) {
                 backToTop.classList.add('visible');
             } else {
@@ -1316,14 +1245,12 @@
             }
         });
 
-        if (backToTop) {
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
-        }
-
-            });
+        });
     </script>
+</body>
+</html>
